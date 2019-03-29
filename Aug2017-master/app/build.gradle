@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        applicationId "bluetooth.tv.example.com.bluetooth"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.1', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.facebook.litho:litho-core:0.21.0'
+    implementation 'com.facebook.litho:litho-widget:0.21.0'
+    compileOnly 'com.facebook.litho:litho-annotations:0.21.0'
+
+    annotationProcessor 'com.facebook.litho:litho-processor:0.21.0'
+
+    // SoLoader
+    implementation 'com.facebook.soloader:soloader:0.5.1'
+
+    // For integration with Fresco
+    implementation 'com.facebook.litho:litho-fresco:0.21.0'
+
+    // For testing
+    testImplementation 'com.facebook.litho:litho-testing:0.21.0'
+    implementation 'com.qmuiteam:qmui:1.1.2'
+    //noinspection GradleCompatible
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.akexorcist:bluetoothspp:1.0.0'
+    implementation 'com.parse:parse-android:1.13.1'
+}

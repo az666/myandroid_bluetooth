@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/jbshap"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:src="@drawable/bigwater"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="作品名称: 智能饮水机"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="MCU: 51单片机"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="蓝牙型号: HC06"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="专业: 电子科技与技术"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="姓名：王金慧 班级: 1542"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:text="学号: 201510711209"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="2"
+            android:background="@drawable/jbshap"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/connect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="连接蓝牙"
+                android:textColor="@android:color/holo_blue_dark"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="283dp"
+                android:layout_weight="0.05" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical"
+            android:background="@drawable/jbshap">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="60dp"
+                    android:src="@drawable/humtuper"
+                    android:layout_height="60dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/tempture"
+                    android:textSize="20dp"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:layout_gravity="center"
+                    android:text="等待..."
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="5dp"
+                    android:text="℃"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="20dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chunseshap">
+            <ImageButton
+                android:id="@+id/off"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/off"
+                android:visibility="visible" />
+            <ImageButton
+                android:id="@+id/ledoff"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="right"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ledoff"
+                android:visibility="visible" />
+            <ImageButton
+                android:id="@+id/ledon"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="right"
+                android:layout_marginTop="0dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ledon"
+                android:visibility="invisible" />
+            <ImageButton
+                android:id="@+id/on"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/on"
+                android:visibility="invisible" />
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:text="定时开关"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
